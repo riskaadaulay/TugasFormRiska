@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner 1</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+            overflow: hidden;
+        }
+        
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(30, 30, 30, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+            border: 2px solid #61dafb;
+            backdrop-filter: blur(10px);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #61dafb;
+            font-size: 3em;
+            text-shadow: 0 0 10px #61dafb;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas id="waveCanvas"></canvas>
+
+    <div class="container">
+        <h1>Owner 1
+            <Form></Form>
+        </h1>
+
+        <h2>Nama : Felix Ewaldo Panggabean</h2>
+        <p><strong>Nama Panggilan :</strong> Felix</p>
+
+        <h2>Deskripsi</h2>
+        <div class="description">
+            <div class="description">NIM : 202331084</div>
+            <div class="description">Mata Kuliah : Pemrograman Web</div>
+            <div class="description">Kelas : D</div>
+            <div class="description">Jurusan : TI FTEN Angkatan 2023 IT PLN Kota Administratif Jakarta Barat, DKI Jakarta</div>
+            <div class="description">Asal : Kota Palembang</div>
+            <div class="description">Provinsi : Sumatera Selatan</div>
+            <button onclick="window.location.href='exit.html'" style="background-color: #0066cc; color: #e0e0e0; padding: 15px 30px; font-size: 1.2em; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; margin-top: 30px;">
+                Exit
+            </button>
+            <br>
+            <button onclick="window.location.href='index.html'" style="background-color: #0066cc; color: #e0e0e0; padding: 15px 30px; font-size: 1.2em; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; margin-top: 30px;">
+                Kembali Ke Halaman Utama
+            </button>
+            <br>
+            <button onclick="window.location.href='deskripsiform.html'" style="background-color: #0066cc; color: #e0e0e0; padding: 15px 30px; font-size: 1.2em; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; margin-top: 30px;">
+                Tentang Form
+            </button>
+            <button onclick="window.location.href='deskripsi.html'" style="background-color: #0066cc; color: #e0e0e0; padding: 15px 30px; font-size: 1.2em; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; margin-top: 30px;">
+                Deskripsi
+            </button>
+            <button onclick="window.location.href='profile2.html'" style="background-color: #0066cc; color: #e0e0e0; padding: 15px 30px; font-size: 1.2em; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; margin-top: 30px;">
+                Owner 2
+            </button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Felix Ewaldo Panggabean & Riska Tul Fadillah Daullay | Semua hak dilindungi.</p>
+    </div>
+    </div>
+    <script>
+        const canvas = document.getElementById("waveCanvas");
+        const ctx = canvas.getContext("2d");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let waveCount = 6;
+        let waveHeight = 20;
+        let waveLength = 0.02;
+
+        function animateWave() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#282c34';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.beginPath();
+            ctx.moveTo(0, canvas.height / 2);
+            for (let i = 0; i < canvas.width; i++) {
+                let y = canvas.height / 2 + Math.sin(i * waveLength + Date.now() * 0.005) * waveHeight;
+                ctx.lineTo(i, y);
+            }
+            ctx.lineTo(canvas.width, canvas.height);
+            ctx.lineTo(0, canvas.height);
+            ctx.closePath();
+            ctx.fillStyle = 'rgba(97, 218, 251, 0.5)';
+            ctx.fill();
+
+            requestAnimationFrame(animateWave);
+        }
+
+        window.addEventListener("resize", () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        animateWave();
+    </script>
+</body>
+
+</html>

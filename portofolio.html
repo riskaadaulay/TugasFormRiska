@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Formulir Pendaftaran Sekolah Tinggi Teknik Pekanbaru</h2>
+        <form>
+            <div class="form-group">
+                <label>Nama Lengkap :</label>
+                <input type="text" name="nama" required>
+            </div>
+            <div class="form-group">
+                <label>Nama Panggilan :</label>
+                <input type="text" name="nama_panggilan" required>
+            </div>
+            <div class="form-group">
+                <label>NIK :</label>
+                <input type="text" name="nik" required>
+            </div>
+            <div class="form-group">
+                <label>Tempat Lahir :</label>
+                <input type="text" name="tempat_lahir" required>
+            </div>
+            <div class="form-group">
+                <label>Tanggal Lahir :</label>
+                <input type="date" name="tanggal_lahir" required>
+            </div>
+            <div class="form-group">
+                <label>Jenis Kelamin :</label>
+                <input type="radio" name="jenis_kelamin" value="Laki-Laki" required>Laki-Laki
+                <input type="radio" name="jenis_kelamin" value="Perempuan" required>Perempuan
+            </div>
+            <div class="form-group">
+                <label for="anak_nomor_ke">Anak Nomor Ke :</label>
+                <input type="text" id="anak_nomor_ke" name="anak_nomor_ke" required>
+            </div>
+            <div class="form-group">
+                <label for="golongan_darah">Golongan Darah:</label>
+                <select id="golongan_darah" name="golongan_darah">
+                    <option value="">Pilih Golongan Darah</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="AB">AB</option>
+                    <option value="O">O</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="berat_badan">Berat Badan (kg):</label>
+                <input type="number" id="berat_badan" name="berat_badan" required>
+            </div>
+            <div class="form-group">
+                <label for="tinggi_badan">Tinggi Badan (cm):</label>
+                <input type="number" id="tinggi_badan" name="tinggi_badan" required>
+            </div>
+            <div class="form-group">
+                <label for="penyakit">Penyakit Yang Pernah Dialami :</label>
+                <input type="text" id="penyakit" name="penyakit">
+            </div>
+            <div class="form-group">
+                <label>Nomor Handphone :</label>
+                <input type="text" name="nomor_handphone" required>
+            </div>
+            <div class="form-group">
+                <label for="telepon_rumah">Nomor Telepon Rumah :</label>
+                <input type="tel" id="telepon_rumah" name="telepon_rumah" required>
+            </div>
+            <div class="form-group">
+                <label>Email :</label>
+                <input type="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label>Agama :</label>
+                <div>
+                    <input type="checkbox" name="agama" value="Islam"> Islam
+                    <input type="checkbox" name="agama" value="Kristen Protestan"> Kristen Protestan
+                    <input type="checkbox" name="agama" value="Katholik"> Katholik
+                    <input type="checkbox" name="agama" value="Hindu"> Hindu
+                    <input type="checkbox" name="agama" value="Buddha"> Buddha
+                    <input type="checkbox" name="agama" value="Konghucu"> Konghucu
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="kewarganegaraan">Kewarganegaraan:</label>
+                <input type="text" id="kewarganegaraan" name="kewarganegaraan" required>
+            </div>
+            <div class="form-group">
+                <label>Asal Tempat Tinggal Di Riau :</label>
+                <select name="asal_riau" required>
+                    <option>Dari Daerah Lain (Bukan Dari RIAU)</option>
+                    <option> Kota Pekanbaru</option>
+                    <option> Kota Dumai</option>
+                    <option> Kabupaten Bangkinang (Kampar)</option>
+                    <option> Kabupaten Indragiri Hulu (Rengat)</option>
+                    <option> Kabupaten Indragiri Hilir (Tembilahan)</option>
+                    <option> Kabupaten Pelalawan (Pangkalan Kerinci)</option>
+                    <option> Kabupaten Rokan Hulu (Pasir Pengaraian)</option>
+                    <option> Kabupaten Rokan Hilir (Bagansiapiapi)</option>
+                    <option> Kabupaten Siak (Siak Sri Indrapura)</option>
+                    <option> Kabupaten Kuantan Singingi (Teluk Kuantan)</option>
+                    <option> Kabupaten Bengkalis (Bengkalis)</option>
+                    <option> Kabupaten Kepulauan Meranti (Selatpanjang)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="asal_tempat_tinggal_pekanbaru">Asal Tempat Tinggal Di Kota Pekanbaru :</label>
+                <select id="asal_tempat_tinggal_pekanbaru" name="asal_tempat_tinggal_pekanbaru">
+                    <option>Bukan Dari Kota Pekanbaru (Daerah Lain)</option>
+                    <option>Sukajadi</option>
+                    <option>Senapelan</option>
+                    <option>Pekanbaru Kota</option>
+                    <option>Rumbai</option>
+                    <option>Rumbai Barat</option>
+                    <option>Rumbai Timur</option>
+                    <option>Limapuluh</option>
+                    <option>Sail</option>
+                    <option>Bukit Raya</option>
+                    <option>Marpoyan Damai</option>
+                    <option>Tenayan Raya</option>
+                    <option>Payung Sekaki</option>
+                    <option>Tampan</option>
+                    <option>Kulim</option>
+                    <option>Bina Widya</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="asal_daerah">Asal Daerah :</label>
+                <select id="asal_daerah" name="asal_daerah">
+                    <option> Nanggroe Aceh Darussalam (Banda Aceh)</option>
+                <option> Sumatera Utara (Medan)</option>
+                <option> Sumatera Barat (Padang)</option>
+                <option> Riau (Pekanbaru)</option>
+                <option> Kepulauan Riau (Tanjung Pinang)</option>
+                <option> Jambi (Kota Jambi)</option>
+                <option> Bengkulu (Kota Bengkulu)</option>
+                <option> Kepulauan Bangka Belitung (Pangkalpinang)</option>
+                <option> Sumatera Selatan (Palembang)</option>
+                <option> Lampung (Bandar Lampung)</option>
+                <option> Banten (Serang)</option>
+                <option> DKI Jakarta (Jakarta)</option>
+                <option> Jawa Barat (Bandung)</option>
+                <option> Jawa Tengah (Semarang)</option>
+                <option> DI Yogyakarta (Kota Yogyakarta)</option>
+                <option> Jawa Timur (Surabaya)</option>
+                <option> Bali (Denpasar)</option>
+                <option> Nusa Tenggara Barat (Mataram)</option>
+                <option> Nusa Tenggara Timur (Kupang)</option>
+                <option> Kalimantan Selatan (Banjarbaru)</option>
+                <option> Kalimantan Tengah (Palangkaraya)</option>
+                <option> Kalimantan Barat (Pontianak)</option>
+                <option> Kalimantan Timur (Samarinda)</option>
+                <option> Kalimantan Utara (Tanjung Selor)</option>
+                <option> Sulawesi Selatan (Makassar)</option>
+                <option> Sulawesi Tenggara (Kendari)</option>
+                <option> Sulawesi Barat (Mamuju)</option>
+                <option> Sulawesi Tengah (Palu)</option>
+                <option> Gorontalo (Kota Gorontalo)</option>
+                <option> Sulawesi Utara (Manado)</option>
+                <option> Maluku (Ambon)</option>
+                <option> Maluku Utara (Sofifi)</option>
+                <option> Papua (Jayapura)</option>
+                <option> Papua Barat (Manokwari)</option>
+                <option> Papua Tengah (Nabire)</option>
+                <option> Papua Pegunungan (Jayawijaya)</option>
+                <option> Papua Barat Daya (Sorong)</option>
+                <option> Papua Selatan (Merauke)</option>
+            </select>
+            </div>
+    </div>
+    <div class="form-group">
+        <label>Alamat :</label>
+        <textarea name="alamat" rows="3" required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="asal_sekolah">Asal Sekolah :</label>
+        <input type="text" id="asal_sekolah" name="asal_sekolah" required>
+    </div>
+    <div class="form-group">
+        <label for="jurusan_asal">Jurusan Asal Sekolah :</label>
+        <select id="jurusan_asal" name="jurusan_asal">
+                    <option>IPA</option>
+                    <option>IPS</option>
+                    <option>(SMK) Teknik Elektronika</option>
+                    <option>(SMK) Teknik Mesin Dan Otomotif</option>
+                    <option>(SMK) Teknik Informatika Dan Jaringan Komputer</option>
+                    <option>(SMK) Rekayasa Perangkat Lunak</option>
+                    <option>(SMK) Sistem Multimedia, Fotografi, Visual, Media Dan Audio</option>
+                    <option>(SMK) Teknik Gambar Dan Konstruksi Gedung Dan Bangunan</option>
+                    <option>(SMK) Teknik Alat Berat, Pengelasan, Fabrikasi Logam Dan Manufaktur</option>
+                    <option>(SMK) Teknik Industri, Manajemen Pengindustrian Produk, Sistem Pendingin Dan Tata Udara. Energi Surya Dan Angin</option>
+                    <option>(SMK) Teknik Telekomunikasi, Jaringan Akses Telekomunikasi</option>
+                    <option>(SMK) Teknik Komputer Dan Jaringan (TKJ)</option>
+                    <option>Lainnya</option>
+                </select>
+    </div>
+    <div class="form-group">
+        <label for="jurusan_dipilih">Jurusan Yang Akan Dipilih :</label>
+        <select id="jurusan_dipilih" name="jurusan_dipilih">
+                    <option>S1 Teknik Informatika</option>
+                    <option>S1 Sistem Operasi</option>
+                    <option>S1 Teknik Elektro</option>
+                    <option>S1 Teknik Tenaga Listrik</option>
+                    <option>S1 Teknik Sipil</option>
+                    <option>S1 Teknik Industri</option>
+                    <option>S1 Teknik Lingkungan</option>
+                    <option>S1 Geografi</option>
+                    <option>S1 Teknik Mesin</option>
+                    <option>S1 Bisnis Energi</option>
+                    <option>S1 Teknik Sistem Energi</option>
+                    <option>D3 Teknologi Listrik</option>
+                    <option>D3 Teknik Mesin</option>
+                </select>
+    </div>
+    <div class="form-group">
+        <label for="fakultas">Pilih Fakultas Dari Jurusan Yang Telah Anda Pilih :</label>
+        <select id="fakultas" name="fakultas">
+                    <option> Fakultas Teknik Ilmu Komputer</option>
+                    <option> Fakultas Teknik Perencanaan Dan Pengkonstruksian Gedung Dan Bangunan</option>
+                    <option> Fakultas Teknik Industri</option>
+                    <option> Fakultas Teknik Pengelolaan Energi Dan Sistem Terbarukan</option>
+                    <option> Fakultas Teknik Pengelolaan, Pengemnbangan, Dan Pengendalian Lingkungan</option>
+                    <option> Fakultas Teknik Geografi</option>
+                    <option> Fakultas Teknik Pengelolaan Dan Pembuatan Mesin</option>
+                    <option> Fakultas Teknik Pengelolaan Dan Pengendalian Energi Kelistrikan</option>
+                </select>
+    </div>
+    <div class="form-group">
+        <label for="kampus">Pilih Lokasi Kampus Yang Diinginkan :</label>
+        <select id="kampus" name="kampus">
+                    <option> Kampus Pekanbaru Kota</option>
+                    <option> Kampus Marpoyan Damai</option>
+                    <option> Kampus Payung Sekaki</option>
+                    <option> Kampus Limapuluh</option>
+                    <option> Kampus Rumbai</option>
+                </select>
+    </div>
+    <div class="form-group">
+        <label for="alamat_tempat_tinggal">Alamat Tempat Tinggal Selama Kuliah :</label>
+        <textarea id="alamat_tempat_tinggal" name="alamat_tempat_tinggal" rows="3" required></textarea>
+    </div>
+    <h3>Informasi Tambahan</h3>
+    <div class="form-group">
+        <label for="usulan_asrama">Usulan Terkait Asrama Selama Perkuliahan :</label>
+        <select id="usulan_asrama" name="usulan_asrama">
+                    <option value="Ya">Ya</option>
+                    <option value="Tidak">Tidak</option>
+                </select>
+    </div>
+    <h3>Data Wali Ayah</h3>
+    <div class="form-group">
+        <label for="nama_wali">Nama Wali Ayah :</label>
+        <input type="text" id="nama_wali" name="nama_wali" required>
+    </div>
+    <div class="form-group">
+        <label for="alamat_wali">Alamat Wali Ayah :</label>
+        <textarea id="alamat_wali" name="alamat_wali" rows="3" required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="telepon_wali">Nomor Telepon Wali Ayah :</label>
+        <input type="tel" id="telepon_wali" name="telepon_wali" required>
+    </div>
+    <div class="form-group">
+        <label for="pekerjaan_wali">Pekerjaan Wali Ayah :</label>
+        <input type="text" id="pekerjaan_wali" name="pekerjaan_wali" required>
+    </div>
+    <div class="form-group">
+        <label for="pendidikan_wali">Pendidikan Terakhir Wali Ayah :</label>
+        <select id="pendidikan_wali" name="pendidikan_wali">
+            <option>Tidak Sekolah</option>
+            <option>SD</option>
+            <option>SMP</option>
+            <option>SMA</option>
+            <option>Diploma</option>
+            <option>Sarjana</option>
+            <option>Pascasarjana</option>
+            <option>Lainnya</option>
+        </select>
+    </div>
+    </select>
+    </div>
+    <h3>Data Wali Ibu</h3>
+    <div class="form-group">
+        <label for="nama_wali">Nama Wali Ibu :</label>
+        <input type="text" id="nama_wali" name="nama_wali" required>
+    </div>
+    <div class="form-group">
+        <label for="alamat_wali">Alamat Wali Ibu :</label>
+        <textarea id="alamat_wali" name="alamat_wali" rows="3" required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="telepon_wali">Nomor Telepon Wali Ibu:</label>
+        <input type="tel" id="telepon_wali" name="telepon_wali" required>
+    </div>
+    <div class="form-group">
+        <label for="pekerjaan_wali">Pekerjaan Wali Ibu :</label>
+        <input type="text" id="pekerjaan_wali" name="pekerjaan_wali" required>
+    </div>
+    <div class="form-group">
+        <label for="pendidikan_wali">Pendidikan Terakhir Wali Ibu :</label>
+        <select id="pendidikan_wali" name="pendidikan_wali">
+                    <option>Tidak Sekolah</option>
+                    <option>SD</option>
+                    <option>SMP</option>
+                    <option>SMA</option>
+                    <option>Diploma</option>
+                    <option>Sarjana</option>
+                    <option>Pascasarjana</option>
+                    <option>Lainnya</option>
+                </select>
+    </div>
+    </select>
+    </div>
+    <h3>Data Wali Pendamping/Lainnya</h3>
+    <div class="form-group">
+        <label for="nama_wali">Nama Wali Pendamping/Lainnya :</label>
+        <input type="text" id="nama_wali" name="nama_wali" required>
+    </div>
+    <div class="form-group">
+        <label for="alamat_wali">Alamat Wali Pendamping/Lainnya :</label>
+        <textarea id="alamat_wali" name="alamat_wali" rows="3" required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="telepon_wali">Telepon Wali Pendamping/Lainnya :</label>
+        <input type="tel" id="telepon_wali" name="telepon_wali" required>
+    </div>
+    <div class="form-group">
+        <label for="pekerjaan_wali">Pekerjaan Wali Pendamping/Lainnya :</label>
+        <input type="text" id="pekerjaan_wali" name="pekerjaan_wali" required>
+    </div>
+    <div class="form-group">
+        <label for="pendidikan_wali">Pendidikan Terakhir Wali Pendamping/Lainnya :</label>
+        <select id="pendidikan_wali" name="pendidikan_wali">
+            <option>Pilih Pendidikan Terakhir Wali</option>
+            <option>Tidak Sekolah</option>
+            <option>SD</option>
+            <option>SMP</option>
+            <option>SMA</option>
+            <option>Diploma</option>
+            <option>Sarjana</option>
+            <option>Pascasarjana</option>
+        </select>
+    </div>
+    <button onclick="window.location.href='lanjutanportofolio.html'" style="background-color: #0066cc; color: #e0e0e0; padding: 15px 30px; font-size: 1.2em; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; margin-top: 30px;">
+        Daftar
+    </button>
+    <button onclick="window.location.href='index.html'" style="background-color: #0066cc; color: #e0e0e0; padding: 15px 30px; font-size: 1.2em; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; margin-top: 30px;">
+        Kembali Ke Halaman Utama
+    </button>
+    <button onclick="window.location.href='exit.html'" style="background-color: #0066cc; color: #e0e0e0; padding: 15px 30px; font-size: 1.2em; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; margin-top: 30px;">
+        Exit
+    </button>
+    <button onclick="window.location.href='deskripsiform.html'" style="background-color: #0066cc; color: #e0e0e0; padding: 15px 30px; font-size: 1.2em; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; margin-top: 30px;">
+        About
+    </button>
+    <button onclick="window.location.href='deskripsi.html'" style="background-color: #0066cc; color: #e0e0e0; padding: 15px 30px; font-size: 1.2em; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; margin-top: 30px;">
+        Deskripsi
+    </button>
+    <button onclick="window.location.href='profile.html'" style="background-color: #0066cc; color: #e0e0e0; padding: 15px 30px; font-size: 1.2em; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; margin-top: 30px;">
+        Owner 1
+    </button>
+    <button onclick="window.location.href='profile2.html'" style="background-color: #0066cc; color: #e0e0e0; padding: 15px 30px; font-size: 1.2em; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; margin-top: 30px;">
+        Owner 2
+    </button>
+    </form>
+    </div>
+</body>
+
+</html>

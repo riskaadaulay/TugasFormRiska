@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXIT</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+            overflow: hidden;
+        }
+        
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(30, 30, 30, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+            border: 2px solid #61dafb;
+            backdrop-filter: blur(10px);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #61dafb;
+            font-size: 3em;
+            text-shadow: 0 0 10px #61dafb;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas id="waveCanvas"></canvas>
+
+    <div class="container">
+        <h1>EXIT</h1>
+        <h2>PENUTUP</h2>
+        <p>Form ini kami buat untuk meminta data kepada calon mahasiswa-mahasiswi dari sekolah yang telah kami siapkan. Data ini berfungsi sekali didalam memberi gambaran dan informasi-informasi resmi dan nyata terkait mahasiswa-mahasiswi tersebut. Karena,
+            apabila kami tidak mengetahui informasi terkait mahasiswa-mahasiswi itu terlebih dahulu, maka kami tidak akan bisa mengetahui seberapa lebih jauh dan dalamnya informasi terkait calon mahasiswa-mahasiswi tersebut. Formulir ini kami buat sesederhana
+            dan semaksimal mungkin, sepengetahuan kami juga, Dan yang terakhir, mohon maaf apabila keprivasian anda terganggu, tidak lupa mohon maaf juga apabila ada kata-kata ataupun kalimat yang kurang jelas dan menganggu perasaan kalian, serta mohon
+            maaf juga apabila ada informasi yang kurang jelas, sekian dan terimakasih.</p>
+        <button onclick="window.location.href='index.html'" style="background-color: #0066cc; color: #e0e0e0; padding: 15px 30px; font-size: 1.2em; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; margin-top: 30px;">
+            Kembali ke Halaman Utama
+        </button>
+        <br>
+        <button onclick="window.location.href='deskripsiform.html'" style="background-color: #0066cc; color: #e0e0e0; padding: 15px 30px; font-size: 1.2em; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; margin-top: 30px;">
+            Tentang
+        </button>
+        <br>
+        <button onclick="window.location.href='deskripsi.html'" style="background-color: #0066cc; color: #e0e0e0; padding: 15px 30px; font-size: 1.2em; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; margin-top: 30px;">
+            Deskripsi
+        </button>
+        <button onclick="window.location.href='profile.html'" style="background-color: #0066cc; color: #e0e0e0; padding: 15px 30px; font-size: 1.2em; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; margin-top: 30px;">
+            Owner 1
+        </button>
+        <button onclick="window.location.href='profile2.html'" style="background-color: #0066cc; color: #e0e0e0; padding: 15px 30px; font-size: 1.2em; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; margin-top: 30px;">
+            Owner 2
+        </button>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Felix Ewaldo Panggabean & Riska Tul Fadillah Daullay | Semua hak dilindungi.</p>
+    </div>
+
+    <script>
+        const canvas = document.getElementById("waveCanvas");
+        const ctx = canvas.getContext("2d");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let waveCount = 6;
+        let waveHeight = 20;
+        let waveLength = 0.02;
+
+        function animateWave() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#282c34';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.beginPath();
+            ctx.moveTo(0, canvas.height / 2);
+            for (let i = 0; i < canvas.width; i++) {
+                let y = canvas.height / 2 + Math.sin(i * waveLength + Date.now() * 0.005) * waveHeight;
+                ctx.lineTo(i, y);
+            }
+            ctx.lineTo(canvas.width, canvas.height);
+            ctx.lineTo(0, canvas.height);
+            ctx.closePath();
+            ctx.fillStyle = 'rgba(97, 218, 251, 0.5)';
+            ctx.fill();
+
+            requestAnimationFrame(animateWave);
+        }
+
+        window.addEventListener("resize", () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        animateWave();
+    </script>
+</body>
+
+</html>

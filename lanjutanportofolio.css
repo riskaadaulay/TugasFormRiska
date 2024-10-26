@@ -1,0 +1,57 @@
+        body {
+        background: linear-gradient(to right, #6a11cb, #2575fc);
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        color: #fff;
+    }
+    
+    .welcome-container {
+        text-align: center;
+        max-width: 500px;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        border-radius: 10px;
+    }
+    
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+    
+    .button {
+        text-decoration: none;
+        background-color: #fff;
+        color: #6a11cb;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+    
+    .button:hover {
+        background-color: #6a11cb;
+        color: #fff;
+    }
+    
+    .logo {
+        width: 160px;
+        margin-top: -10px;
+        cursor: pointer;
+    }
+    
+    .banner video {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+    
+    @media(min-aspect-ratio: 16/9) {
+        .banner video {
+            width: 100%;
+            height: auto;
+        }

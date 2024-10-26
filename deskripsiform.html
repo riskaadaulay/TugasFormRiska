@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+            overflow: hidden;
+        }
+        
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(30, 30, 30, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+            border: 2px solid #61dafb;
+            backdrop-filter: blur(10px);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #61dafb;
+            font-size: 3em;
+            text-shadow: 0 0 10px #61dafb;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Canvas for Animated Background -->
+    <canvas id="starfield"></canvas>
+
+    </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>About
+                <Form></Form>
+            </h1>
+
+            <h2>Tentang Form</h2>
+            <div class="description">
+                <div class="description">Form ini kami buat untuk meminta data kepada calon mahasiswa-mahasiswi dari sekolah yang telah kami siapkan. Data ini berfungsi sekali didalam memberi gambaran dan informasi-informasi resmi dan nyata terkait mahasiswa-mahasiswi tersebut.
+                    Karena, apabila kami tidak mengetahui informasi terkait mahasiswa-mahasiswi itu terlebih dahulu, maka kami tidak akan bisa mengetahui seberapa lebih jauh dan dalamnya informasi terkait calon mahasiswa-mahasiswi tersebut. Formulir ini
+                    kami buat sesederhana dan semaksimal mungkin, sepengetahuan kami juga, Dan yang terakhir, mohon maaf apabila keprivasian anda terganggu, tidak lupa mohon maaf juga apabila ada kata-kata ataupun kalimat yang kurang jelas dan menganggu
+                    perasaan kalian, serta mohon maaf juga apabila ada informasi yang kurang jelas, sekian dan terimakasih.
+                </div>
+                <button onclick="window.location.href='index.html'" style="background-color: #0066cc; color: #e0e0e0; padding: 15px 30px; font-size: 1.2em; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; margin-top: 30px;">
+                Kembali ke Halaman Utama
+            </button>
+                <br>
+                <button onclick="window.location.href='exit.html'" style="background-color: #0066cc; color: #e0e0e0; padding: 15px 30px; font-size: 1.2em; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; margin-top: 30px;">
+                Exit
+            </button>
+                <br>
+                <button onclick="window.location.href='deskripsi.html'" style="background-color: #0066cc; color: #e0e0e0; padding: 15px 30px; font-size: 1.2em; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; margin-top: 30px;">
+                Deskripsi
+            </button>
+                <button onclick="window.location.href='profile.html'" style="background-color: #0066cc; color: #e0e0e0; padding: 15px 30px; font-size: 1.2em; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; margin-top: 30px;">
+                Owner 1
+            </button>
+                <button onclick="window.location.href='profile2.html'" style="background-color: #0066cc; color: #e0e0e0; padding: 15px 30px; font-size: 1.2em; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; margin-top: 30px;">
+                Owner 2
+            </button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 Felix Ewaldo Panggabean & Riska Tul Fadillah Daullay | Semua hak dilindungi.</p>
+        </div>
+        </div>
+        <script>
+            const canvas = document.getElementById("starfield");
+            const ctx = canvas.getContext("2d");
+
+            // Set canvas size to window size
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            // Create star objects
+            const stars = [];
+            for (let i = 0; i < 100; i++) {
+                stars.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    radius: Math.random() * 1.5,
+                    speed: Math.random() * 0.5 + 0.5
+                });
+            }
+
+            // Animate stars
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                stars.forEach(star => {
+                    ctx.beginPath();
+                    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = "#61dafb";
+                    ctx.fill();
+
+                    // Move star down and reset if it goes out of bounds
+                    star.y += star.speed;
+                    if (star.y > canvas.height) {
+                        star.y = 0;
+                        star.x = Math.random() * canvas.width;
+                    }
+                });
+                requestAnimationFrame(animate);
+            }
+            animate();
+
+            // Adjust canvas size when the window is resized
+            window.addEventListener("resize", () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+        </script>
+    </body>
+
+</html>
